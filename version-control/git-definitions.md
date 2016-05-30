@@ -10,3 +10,5 @@
  1. Commits are save points in version control, because it does not save automatically. Commits should be made when changes are made. They consist of: a unique ID, a message, an author and a timestamp. A good commit message is specific.
 * What is a merge conflict?
  1. Merge conflicts occur when two branches try to merge and they have both edited the same part of the same file. An editor is used to resolve the conflict. 
+
+Aloha!
