@@ -11,4 +11,3 @@
 * What is a merge conflict?
  1. Merge conflicts occur when two branches try to merge and they have both edited the same part of the same file. An editor is used to resolve the conflict. 
 
-Aloha!
