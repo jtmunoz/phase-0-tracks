@@ -11,3 +11,7 @@
 * What is a merge conflict?
  
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> master
