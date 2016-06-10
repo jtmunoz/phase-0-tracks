@@ -52,12 +52,16 @@ main {
 
 @media only screen and (max-width: 500px) {
     h1 {
-      font-size: 20em;
+      font-size: .8em;
     }
 }
 
 @media only screen and (max-width: 500px) {
     body {
-        background-color:lightblue;
+        font-size: .5em;
     }
+}
+* {
+    margin: auto;
+    padding: 10px;
 }
