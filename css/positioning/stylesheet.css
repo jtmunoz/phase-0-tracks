@@ -1,5 +1,6 @@
 h1 {
 	color: purple;
+	background-color: transparent;
 }
 .stylish-octopus {
 	background-color: blue;
@@ -9,11 +10,19 @@ h1 {
 	right: auto;
 	left: auto;
 	margin: 10px;
-	z-index: -1;
+	z-index: -2;
 }	
 #glasses {
 	background-color: transparent;
+	position: relative;
+	left: 50px;
+	top: 5px;
+	transform: rotate(180deg);
 }
 #hat {
 	background-color: transparent;
+	position: relative;
+	left: -150px;
+	top: -75px;
+	z-index: -1;
 	}
