@@ -1,3 +1,19 @@
 h1 {
 	color: purple;
 }
+.stylish-octopus {
+	background-color: blue;
+}
+#octopus {
+	position: absolute;
+	right: auto;
+	left: auto;
+	margin: 10px;
+	z-index: -1;
+}	
+#glasses {
+	background-color: transparent;
+}
+#hat {
+	background-color: transparent;
+	}
