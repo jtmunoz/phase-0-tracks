@@ -1,3 +1,37 @@
 h1 {
 	color: purple;
+	background-color: transparent;
+	width: auto;
+}
+body {
+	width: auto; 
+}
+.stylish-octopus {
+	background-color: blue;
+	width: auto;
+	height: 500px;
+	z-index: -1;
+}
+#octopus {
+	width: inherit;
+	margin-top: 100px;
+	margin-left: 50%;
+	margin-right: 50%;
+	z-index: 1;
+}	
+#glasses {
+	background-color: transparent;
+	transform: rotate(180deg);
+	z-index: 1;
+	position: relative;
+	top: -295px;
+	left: 660px;
+	
+}
+#hat {
+	background-color: transparent;
+	position: relative;
+	left: 450px;
+	top: -365px;
+	z-index: 1;
 }
