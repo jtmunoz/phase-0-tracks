@@ -1,3 +1,20 @@
-body {
-	background-color: pink;
+header {
+  max-width: auto;
+  background-color: green;
+}
+.column-1 {
+  float: left;
+  max-width: 49%;
+  background-color: blue;
+ 
+}
+.column-2 {
+  float: right;
+  max-width: 49%;
+  background-color: red;
+}
+
+footer {
+  clear: both;
+  background-color: yellow;
 }
