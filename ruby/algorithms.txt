@@ -1,0 +1,133 @@
+[Using an Elevator]
+-Find Up and Down buttons
+-If floor destination is greater than current floor
+	-Press Up
+	-If floor is lesser than press down button
+-Wait for door to open
+	-If door does not open press button, until door opens
+-When door opens walk inside
+-Stop once inside
+-Rotate until buttons are visible
+-Move towards buttons
+-Wait 5 secondsWh
+-Ask “Does anyone need a ride?”
+-If response is yes then press Door Open button
+	-If YES press door open 
+		-Wait for potential riders
+		-Once all riders have entered 
+		-Ask “What floor?”
+		-Press requested button for requested floor
+		-Press  and hold door open upon arrival of requested floor
+		-Wait for riders to disembark
+		-If more riders enter, announce floor destination
+		-Wait 5 seconds
+		-If riders stay press Close Door button
+		-Ask for requested floor
+		-Repeat until floor destination is met or all riders have disembarked			-If all riders disembark prior to arrive at floor destination 				proceed as if NO 
+	-If NO the press Door Close button
+-Press button of floor destination
+-Wait for elevator to reach floor destination
+-Verify floor has been reached
+-Wait for doors to open
+-Exit elevator
+
+[Getting Ready for Work]
+#Prior condition have been met prior to this program being run
+-Press snooze on alarm
+	-Set timer for 5 minutes
+		-Repeat until necessary
+			-If repeated more than 5 five times
+				-Call in sick
+			-If forget to set timer call in sick
+				-Call in sick
+-Get out of bed, feet first
+-Walk alongside of bed upon arrival at bed end turn left
+-Continue walking out of room
+-First door on left turn left and enter room
+-Turn on light switch on right
+-If need to fill up liquid evacuation receptacle arises then fill
+	-If filled then depress lever to facilitate movement of liquids
+		-Walk left until arrival at sink
+		-Wash hand thorough with warm water
+		-Dry hands		
+		-Walk towards bathtub
+	-If not continue walking to bathtub
+-Sit down on edge of bathtub for two minutes
+-Ask “Why do I wake up this early?”
+-Put on socks on feet
+	-Verify left sock on left foot and right sock on right foot
+-Put on t-shirt 
+	-Head first through largest hole continue passing shirt over until head 
+	 protrudes through middle hole
+	-Place left arm through left arm hole
+	-Place right arm through right arm hole
+-Put on collared  shirt over t-shirt
+	--Head first through largest hole continue passing shirt over until head 
+	 protrudes through middle hole
+	-Place left arm through left arm hole
+	-Place right arm through right arm hole
+	-Button buttons 
+-Put on pants
+	-Left leg through left pant leg
+	-Right leg through right pant leg
+	-Pull up pants over bottom of t-shirt and collared shirt
+	-Pull up zipper
+	-Button buttons
+-Place belt through belt loops
+	-Fasten buckle of belt
+-Walk back to sink
+-Open up cabinet
+-Grab toothpaste
+-Grab toothbrush
+-Turn on water
+-Run brush under faucet two seconds
+-Turn off water
+-Place toothpaste on toothbrush
+-Place toothbrush in mouth
+	-Brush teeth minimum thirty seconds
+-Spit out 
+-Turn on water
+-Rinse off toothbrush
+-Cup water in hand
+-Place water in mouth
+-Turn off water
+-Swish for three seconds
+-Spit in sink
+-Place toothbrush back in cabinet
+-Grab mouthwash
+-Untwist cap
+-Fill with mouthwash to fill line
+-Place wash in mouth
+-Swish for thirty seconds
+-Spit in sink
+-Twist cap on mouthwash
+-Place back in cabinet
+-Close cabinet
+-Turn on water
+-Cup water in both hands
+-Splash water on face
+-Turn off water
+-Turn around dry off face on towel
+-Walk left out of bathroom
+-Turn right and enter bedroom
+-Turn right and walk alongside bed until arrival at wife
+-Kiss wife
+-Say “See you later. Give the princess a hug and kiss from me. Love you.”
+-Turnaround walk alongside bed
+-Turn left and walk down hall 
+-Turn right and continue walking
+-Turn right again and walk until arrival at shoes
+-Place right shoe on right foot and left shoe on left foot.
+-Walk to door
+-Unlock door
+-Open door
+-Walk outside
+-Turn around and close door
+-Lock Door
+
+END
+
+
+
+
+
