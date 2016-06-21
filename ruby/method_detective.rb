@@ -19,7 +19,7 @@ puts "Stop! You’re under arrest!".upcase
 puts "the usual".insert(-1, ' supsects')
 #=> "the usual suspects"
 
-# " suspects".<???>
+puts " suspects".insert(0,'the usual')
 # => "the usual suspects"
 
 puts "The case of the disappearing last letter".chop
