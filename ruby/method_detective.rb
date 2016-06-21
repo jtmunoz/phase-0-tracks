@@ -7,22 +7,22 @@
 puts "iNvEsTiGaTiOn".swapcase
 # => “InVeStIgAtIoN”
 
-# "zom".<???>
+puts "zom".replace "zoom"
 # => “zoom”
 
-# "enhance".<???>
+puts "enhance".center(16)
 # => "    enhance    "
 
- puts "Stop! You’re under arrest!".upcase
+puts "Stop! You’re under arrest!".upcase
 #=> "STOP! YOU’RE UNDER ARREST!"
 
-# "the usual".<???>
+puts "the usual".insert(-1, ' supsects')
 #=> "the usual suspects"
 
 # " suspects".<???>
 # => "the usual suspects"
 
- puts "The case of the disappearing last letter".chop
+puts "The case of the disappearing last letter".chop
  #=> "The case of the disappearing last lette"
 
 # "The mystery of the missing first letter".<???>
