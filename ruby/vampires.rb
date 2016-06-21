@@ -9,12 +9,12 @@ until forms == hr_answer.to_i
 	valid_input = false
 	until valid_input
 	puts "Hi, ... I'm sorry what is your name?"
-		new_hire= gets.chomp
+		new_hire = gets.chomp
 		name = new_hire
 		if name == new_hire
 			puts "Thanks. Nice to meet you."
 			valid_input = true
-		else name != String
+		else name == nil
 			puts "I'm sorry. I did not here you."
 		end
 	end
@@ -82,9 +82,9 @@ until forms == hr_answer.to_i
 	
 	name= new_hire
 	case name
-		when new_hire= "Dr. Acula"
+		when new_hire == "Dr. Acula"
 	    	puts "#{new_hire} are you sure you want to work here. You seem to be over qualified."
-		when new_hire= "Tu fang"
+		when new_hire == "Tu fang"
 	    	puts "I am so sorry #{new_hire} the position has just been filled."
 		else
 	    	puts "I love your name"
@@ -106,13 +106,15 @@ until forms == hr_answer.to_i
 		end
 	end
 	
-	if actual_age && (conditional_phrase || conditional_phrase) == true
+	
+
+	if actual_age(date, new_hire_birth.to_i) && (conditional_response || hire_enrollment) == true
 			puts "Probably not a vampire"
 		elsif !employee_allergic_sunshine == true
 			puts "Probabaly a vampire"
-		elsif actual_age && (conditional_phrase || hire_enrollment) == true
+		elsif actual_age(date, new_hire_birth.to_i) && (conditional_response || hire_enrollment) == true
 			puts "Probably a vampire"
-		elsif actual_age && (conditional_phrase && hire_enrollmen)t == true
+		elsif actual_age(date, new_hire_birth.to_i) && (conditional_response && hire_enrollment) == true
 			puts "Most likely a vampire"
 		else 
 			puts "Results Inconclusive"
