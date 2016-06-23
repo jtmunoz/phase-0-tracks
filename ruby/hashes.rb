@@ -6,7 +6,7 @@
 # => decor theme, 
 # => and so on (you can choose your own as long as it's a good mix of string, integer, and boolean data).
 
-client_info = Hash.new
+#client_info = Hash.new
 client_info = {
 	client_name: "Jordan",
 	client_age: nil,
@@ -14,7 +14,31 @@ client_info = {
 	likes_ranch: true,
 	likes_new_england: false
 }
-p client_info
+
+
+#p client_info
+
+puts "Hi, This is Jordan."
+
+puts "I will be assisting in the design your house."
+
+puts "I have some basic questions."
+
+puts "I am so sorry, what is your name?"
+
+first_name = gets.chomp
+
+puts "Hi, #{first_name}. And your last name?"
+
+last_name = gets.chomp
+
+puts "I went to school with a #{last_name}."
+
+full_name = first_name + last_name
+
+puts "Ok,#{full_name}"
+
+
 
 #Your keys should be symbols unless you find that you need a string for some reason -- 
 #usually only when spaces or other "user friendly" formatting are needed 
