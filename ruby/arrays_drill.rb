@@ -14,7 +14,7 @@ end
 #, and returns the array with the item added.
 
 def ary_item(generic_array, item)
-	item = ""
+	generic_array = 
 	generic_array << item
 	#generic_array = ["coffee", "cream", "sugar"]
 
