@@ -6,6 +6,16 @@
 # => decor theme, 
 # => and so on (you can choose your own as long as it's a good mix of string, integer, and boolean data).
 
+client_info = Hash.new
+client_info = {
+	client_name: "Jordan",
+	client_age: nil,
+	decor_theme: "modern",
+	likes_ranch: true,
+	likes_new_england: false
+}
+p client_info
+
 #Your keys should be symbols unless you find that you need a string for some reason -- 
 #usually only when spaces or other "user friendly" formatting are needed 
 #(as in the case of using someone's full name as a hash key). 
