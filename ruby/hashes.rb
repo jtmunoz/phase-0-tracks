@@ -1,3 +1,9 @@
+# Release 2
+# 1. h.clear - deletes all key value pairs
+	# h.delete("key") - deletes a specific key
+# 2. Accessing a key that is not in the hash produces a hash.
+# 3. 
+
 #pseudocode and write a program that will allow an interior designer to enter the details of a given 
 #client:
 #	the client's name, 
@@ -8,8 +14,8 @@
 
 #client_info = Hash.new
 client_info = {
-	client_name: "Jordan",
-	client_age: nil,
+	client_name: "#{client_name}",
+	client_age: "25",
 	decor_theme: "modern",
 	likes_ranch: true,
 	likes_new_england: false
@@ -19,24 +25,29 @@ client_info = {
 #p client_info
 
 puts "Hi, This is Jordan."
-
 puts "I will be assisting in the design your house."
-
 puts "I have some basic questions."
-
 puts "I am so sorry, what is your name?"
-
-first_name = gets.chomp
+first_name = gets.chomp	
 
 puts "Hi, #{first_name}. And your last name?"
-
 last_name = gets.chomp
 
 puts "I went to school with a #{last_name}."
+full_name = first_name +" "+last_name
 
-full_name = first_name + last_name
+puts "Ok, #{client_name}, If you dont mind me asking how old are you?"
+age = gets.chomp
 
-puts "Ok,#{full_name}"
+puts "#{first_name} what type of decor theme are you looking for?"
+theme = gets.chomp
+
+puts "Do you like ranch style house?"
+ranch = gets.chomp
+
+puts "Do you like New England style of houses"
+new_england = gets.chomp
+
 
 
 
