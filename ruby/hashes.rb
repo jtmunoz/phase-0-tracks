@@ -19,21 +19,23 @@
 # => decor theme, 
 # => and so on (you can choose your own as long as it's a good mix of string, integer, and boolean data).
 
+#Your keys should be symbols unless you find that you need a string for some reason -- 
+#usually only when spaces or other "user friendly" formatting are needed 
+#(as in the case of using someone's full name as a hash key). 
+#Basically, symbols are simpler for programmers to use, 
+#and readable enough by technical folks to be used in place of strings most of the time.
+
+#Your program should ...
+
+#Prompt the designer/user for all of this information.
+#Convert any user input to the appropriate data type.
+#Print the hash back out to the screen when the designer has answered all of the questions.
 
 #def insert_item (key, value)
 #	client_info = Hash.new
 #	client_info[:key] = value
 #end
 
-#def client_info(variable_1, variable_2)
-#	hash_name = {}
-#	variable_1.to_sym
-#	hash_name[:variable_1] = variable_2
-#end
-#p client_info
-
-#add_hash("cookie", "chocolate chip")
-#puts "#{add_hash("cookie", "chocolate chip")}"
 puts "Hi, This is Hal 9000."
 puts "I will be assisting in the design your house."
 puts "I have some basic questions."
@@ -69,20 +71,18 @@ client_info = {
 
 puts client_info
 
-##insert_item(:client_name, full_name)
-#puts insert_item(:client_info, full_name) 
-#puts insert_item	
-#Your keys should be symbols unless you find that you need a string for some reason -- 
-#usually only when spaces or other "user friendly" formatting are needed 
-#(as in the case of using someone's full name as a hash key). 
-#Basically, symbols are simpler for programmers to use, 
-#and readable enough by technical folks to be used in place of strings most of the time.
+puts "Are there any revisions needed? (yes or none)"
+answer = gets.chomp
 
-#Your program should ...
+if answer == "none"
+	puts "Thanks, I will take all your information into consideration."
+elsif answer == "yes"
+	puts "What would like to change?"
+end
 
-#Prompt the designer/user for all of this information.
-#Convert any user input to the appropriate data type.
-#Print the hash back out to the screen when the designer has answered all of the questions.
+
+p client_info
+
 #Give the user the opportunity to update a key (no need to loop, once is fine). 
 #After all, sometimes users make mistakes! 
 #If the designer says "none", skip it. 
