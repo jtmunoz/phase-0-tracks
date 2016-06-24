@@ -56,6 +56,7 @@ theme = gets.chomp
 
 puts "Do you like ranch style house?"
 ranch = gets.chomp
+likes_ranch = ranch 
 
 puts "Do you like New England style of houses?"
 new_england = gets.chomp
@@ -69,19 +70,35 @@ client_info = {
 	likes_new_england: "{new_england}"
 }
 
-puts client_info
+#puts client_info
 
-puts "Are there any revisions needed? (yes or none)"
+#loop do
+#	puts "Are there any revisions needed? (yes or none)"
+#	answer = gets.chomp
+#
+#	case answer 
+#	when "yes"
+#		puts "What would like to change?"
+#		break
+#	when "none"
+#		puts "Thanks, I will take all your information into consideration."
+#		break
+#	end
+#end
+puts "Are there any revisions needed? yes or none"
 answer = gets.chomp
-
-if answer == "none"
-	puts "Thanks, I will take all your information into consideration."
+ 
+ if answer == "none"
+ 	puts "Thanks, I will take all your information into consideration."
 elsif answer == "yes"
-	puts "What would like to change?"
+	puts "Ok let go ahead and update."
 end
 
+puts "What would you like to change: Name, Age, Decor?"
+conditonal_change = gets.chomp
+condition_change = 
 
-p client_info
+puts client_info
 
 #Give the user the opportunity to update a key (no need to loop, once is fine). 
 #After all, sometimes users make mistakes! 
