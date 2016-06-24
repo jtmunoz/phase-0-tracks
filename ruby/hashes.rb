@@ -19,25 +19,21 @@
 # => decor theme, 
 # => and so on (you can choose your own as long as it's a good mix of string, integer, and boolean data).
 
-#client_info = Hash.new
-#client_info = {
-#	client_name: "#{client_name}",
-#	client_age: "25",
-#	decor_theme: "modern",
-#	likes_ranch: true,
-#	likes_new_england: false
-#}
 
-def insert_item ()
-	client_info = Hash.new
-	client_info["client_name"] = "#{full_name}"
-	client_info["client_age"] = "#{age}"
-	client_info["decor_theme"] = "#{theme}"
-	client_info["likes_ranch"] = "#{ranch}"
-	client_info["likes_new_england"] = "#{new_england}"
-end
+#def insert_item (key, value)
+#	client_info = Hash.new
+#	client_info[:key] = value
+#end
+
+#def client_info(variable_1, variable_2)
+#	hash_name = {}
+#	variable_1.to_sym
+#	hash_name[:variable_1] = variable_2
+#end
 #p client_info
 
+#add_hash("cookie", "chocolate chip")
+#puts "#{add_hash("cookie", "chocolate chip")}"
 puts "Hi, This is Hal 9000."
 puts "I will be assisting in the design your house."
 puts "I have some basic questions."
@@ -62,8 +58,20 @@ ranch = gets.chomp
 puts "Do you like New England style of houses?"
 new_england = gets.chomp
 
-puts insert_item
+client_info = Hash.new
+client_info = {
+	client_name: "#{full_name}",
+	client_age: "#{age}",
+	decor_theme: "#{theme}",
+	likes_ranch: "#{ranch}",
+	likes_new_england: "{new_england}"
+}
 
+puts client_info
+
+##insert_item(:client_name, full_name)
+#puts insert_item(:client_info, full_name) 
+#puts insert_item	
 #Your keys should be symbols unless you find that you need a string for some reason -- 
 #usually only when spaces or other "user friendly" formatting are needed 
 #(as in the case of using someone's full name as a hash key). 
