@@ -13,14 +13,19 @@ end
 #At the top of your file, add a method that takes an array and an item as parameters
 #, and returns the array with the item added.
 
-def ary_item(generic_array, item)
-	generic_array = 
-	generic_array << item
-	#generic_array = ["coffee", "cream", "sugar"]
+def beer(arr, x, y)
+    build = Array.new 
+    arr << x << y 
+end
 
-	
-
-end	
+#def ary_item(generic_array, item)
+#	generic_array = 
+#	generic_array << item
+#	#generic_array = ["coffee", "cream", "sugar"]
+#
+#	
+#
+#end	
 
 # So add_to_array([], "a") would return ["a"], 
 #and add_to_array(["a", "b", "c", 1, 2], 3) would return ["a", "b", "c", 1, 2, 3]. 
@@ -56,6 +61,5 @@ new_variable = nbc + espn
 #p new_variable
 
 puts add("apple","carrot","potato")
-p ary_item([], "espresso")
-
+puts beer(["corona", "budweiser", "heineken"], "cider", "lime_juice")
 
