@@ -1,9 +1,16 @@
 # Release 2
 # 1. h.clear - deletes all key value pairs
 	# h.delete("key") - deletes a specific key
-# 2. Accessing a key that is not in the hash produces a hash.
-# 3. 
-
+# 2. Accessing a key that is not in the hash can produces a hash.
+# 3. To set a different default return value when a key is not present use .default = "Message"
+	#  hash_name.default = "Generic Message"
+# 4. To access a specific key write the hash name with key name in square brackets and a colon
+	# i.e  hash_name[:key_name]
+ 	# It will return the value of the key
+# 5. h.clear - deletes all key values from the hash
+# 6. h.values - retireves all the values from a hash
+	# hash_name.values => [value_1, value_2]
+	#h.values_at - retrieves the value at specific key
 #pseudocode and write a program that will allow an interior designer to enter the details of a given 
 #client:
 #	the client's name, 
@@ -13,18 +20,25 @@
 # => and so on (you can choose your own as long as it's a good mix of string, integer, and boolean data).
 
 #client_info = Hash.new
-client_info = {
-	client_name: "#{client_name}",
-	client_age: "25",
-	decor_theme: "modern",
-	likes_ranch: true,
-	likes_new_england: false
-}
+#client_info = {
+#	client_name: "#{client_name}",
+#	client_age: "25",
+#	decor_theme: "modern",
+#	likes_ranch: true,
+#	likes_new_england: false
+#}
 
-
+def insert_item ()
+	client_info = Hash.new
+	client_info["client_name"] = "#{full_name}"
+	client_info["client_age"] = "#{age}"
+	client_info["decor_theme"] = "#{theme}"
+	client_info["likes_ranch"] = "#{ranch}"
+	client_info["likes_new_england"] = "#{new_england}"
+end
 #p client_info
 
-puts "Hi, This is Jordan."
+puts "Hi, This is Hal 9000."
 puts "I will be assisting in the design your house."
 puts "I have some basic questions."
 puts "I am so sorry, what is your name?"
@@ -36,7 +50,7 @@ last_name = gets.chomp
 puts "I went to school with a #{last_name}."
 full_name = first_name +" "+last_name
 
-puts "Ok, #{client_name}, If you dont mind me asking how old are you?"
+puts "Ok, #{full_name}, If you dont mind me asking how old are you?"
 age = gets.chomp
 
 puts "#{first_name} what type of decor theme are you looking for?"
@@ -45,11 +59,10 @@ theme = gets.chomp
 puts "Do you like ranch style house?"
 ranch = gets.chomp
 
-puts "Do you like New England style of houses"
+puts "Do you like New England style of houses?"
 new_england = gets.chomp
 
-
-
+puts insert_item
 
 #Your keys should be symbols unless you find that you need a string for some reason -- 
 #usually only when spaces or other "user friendly" formatting are needed 
