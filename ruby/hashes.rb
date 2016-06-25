@@ -54,12 +54,13 @@ age = gets.chomp
 puts "#{first_name} what type of decor theme are you looking for?"
 theme = gets.chomp
 
-puts "Do you like ranch style house?"
+puts "Do you like the ranch style house? true or false "
 ranch = gets.chomp
-likes_ranch = ranch 
+likes_ranch = ranch == true
 
-puts "Do you like New England style of houses?"
+puts "Do you like the New England style of houses? true or false"
 new_england = gets.chomp
+likes_new_england = new_england == true
 
 client_info = Hash.new
 client_info = {
@@ -72,33 +73,44 @@ client_info = {
 
 #puts client_info
 
-#loop do
-#	puts "Are there any revisions needed? (yes or none)"
-#	answer = gets.chomp
-#
-#	case answer 
-#	when "yes"
-#		puts "What would like to change?"
-#		break
-#	when "none"
-#		puts "Thanks, I will take all your information into consideration."
-#		break
-#	end
-#end
-puts "Are there any revisions needed? yes or none"
-answer = gets.chomp
- 
- if answer == "none"
- 	puts "Thanks, I will take all your information into consideration."
-elsif answer == "yes"
-	puts "Ok let go ahead and update."
+loop do
+	puts "Are there any revisions needed? (yes or none)"
+	answer = gets.chomp
+
+	case answer 
+	when "yes"
+		puts "What would like to change?"
+			conditional_change
+		break
+	when "none"
+		puts "Thanks, I will take all your information into consideration."
+		break
+	end
 end
 
-puts "What would you like to change: Name, Age, Decor?"
-conditonal_change = gets.chomp
-condition_change = 
 
-puts client_info
+#puts "Are there any revisions needed? yes or none"
+#answer = gets.chomp
+# 
+# if answer == "none"
+# 	puts "Thanks, I will take all your information into consideration."
+#elsif answer == "yes"
+#	puts "Ok let go ahead and update."
+#end
+#
+#puts "What would you like to change: client_name, client_age, decor_theme?"
+#conditional_change = gets.chomp
+
+def change_to_symbol(x)
+	"".to_sym
+end
+
+puts "#{conditional_change}"
+
+#puts conditional_change
+
+
+
 
 #Give the user the opportunity to update a key (no need to loop, once is fine). 
 #After all, sometimes users make mistakes! 
