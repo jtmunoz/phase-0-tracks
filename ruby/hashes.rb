@@ -72,22 +72,59 @@ client_info = {
 }
 
 #puts client_info
-
-loop do
-	puts "Are there any revisions needed? (yes or none)"
+valid_input = false
+until valid_input
+	puts "Are there any revisions need?"
 	answer = gets.chomp
 
-	case answer 
-	when "yes"
-		puts "What would like to change?"
-			conditional_change
-		break
-	when "none"
-		puts "Thanks, I will take all your information into consideration."
-		break
+	if answer == "yes"
+		puts "What would you like to change client_name, client_age, decor_theme?"
+			conditional_change = gets.chomp
+			result = ''
+			#conditional_change.to_sym
+			"#{conditional_change}".to_sym
+		puts "What would you like the #{conditional_change} to be?"
+			new_theme = gets.chomp	
+			#def new_key_value (x, y, z)
+			#	x = { y => z}
+			#end
+			client_info["#{conditional_change}".to_sym] = "#{new_theme}"
+		valid_input = true
+	elsif answer == "none"
+		puts "Thanks, I will take your information into consideration"
+		valid_input = true
+		
+	else
+		puts "Come on. There's got to be something"
 	end
 end
+#loop do
+#	
+#	puts "Are there any revisions needed? (yes or none)"
+#	answer = gets.chomp
+#
+#	case answer 
+#	when "yes"
+#		puts "What would you like to change client_name, client_age, decor_theme?"
+#			conditional_change = gets.chomp
+#			result = ''
+#			#conditional_change.to_sym
+#			"#{conditional_change}".to_sym
+#		puts "What would you like the #{conditional_change} to be?"
+#			new_theme = gets.chomp	
+#			def new_key_value (x, y, z)
+#				x = { y => z}
+#			end
+#			new_key_value("client_info", "#{conditional_change}".to_sym, "#{new_theme}")
+#		break
+#	when "none"
+#		puts "Thanks, I will take all your information into consideration."
+#		break
+#	end
+#	
+#end
 
+puts client_info
 
 #puts "Are there any revisions needed? yes or none"
 #answer = gets.chomp
@@ -101,11 +138,11 @@ end
 #puts "What would you like to change: client_name, client_age, decor_theme?"
 #conditional_change = gets.chomp
 
-def change_to_symbol(x)
-	"".to_sym
-end
+#def change_to_symbol(x)
+#	"".to_sym
+#end
 
-puts "#{conditional_change}"
+#puts "#{conditional_change}"
 
 #puts conditional_change
 
