@@ -43,3 +43,15 @@ end
 p total
 
 p calories
+
+numbers = [2 , 138, 2384 , 726, 345, 12234, 77777, 23, 15999, 2000, 3025]
+
+p numbers
+
+#p numbers.delete_if {|score| score < 1000}
+#numbers.sort!
+p numbers.take_while {|score| score < 5000}
+
+p numbers.take(2)
+#p numbers
+
