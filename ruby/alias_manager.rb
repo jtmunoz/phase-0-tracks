@@ -6,11 +6,51 @@
 def name_swapping(first, last)
 	x = first
 	y = last
-	y + " " + x
+	y + " " + x	
 end
-#p name_swapping("potato", "mashed")
+#puts name_swapping("potato", "mashed")
 
 #Changing all of the vowels (a, e, i, o, or u) to the next vowel in 'aeiou'
+
+def change_letter(word)
+result = ''  
+  character_count = word.length
+  character_count.times do |index|
+  current_letter = word[index]
+    if current_letter == 'z'
+      next_letter = 'a'
+    elsif current_letter == ' '
+      next_letter = ' '
+    else
+      next_letter = current_letter.next
+    end
+    result += next_letter
+  end
+  
+  result
+
+# 	index = 0
+# 	while index < str.length
+#   		str[index] = str[index].next!
+# 		current_letter = str[index].next!
+# 			if current_letter == 'z'
+#      			next_letter = 'a'
+#    		elsif current_letter == ' '
+#      			next_letter = ' '
+#      		else
+#      			next_letter = current_letter.next
+#   			end
+#
+#   			index += 1
+# 	end
+# 	puts str
+end
+
+#puts "#{change_letter("Felicia")}","#{change_letter("Torres")}"
+"#{change_letter("Felicia")}"
+"#{change_letter("Torres")}"
+puts "#{name_swapping("#{change_letter("Felicia")}", "#{change_letter("Torres")}")}"
+#puts change_vowel("zzzz")
 
 # and all of the consonants (everything else besides the vowels) 
 #to the next consonant in the alphabet. 
