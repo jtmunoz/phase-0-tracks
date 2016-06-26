@@ -9,23 +9,20 @@ starbucks_college_plaza = {
 			Felicia: "Food-Float", 
 			Jordan: "Drive-Thru Register",
 			Amber: "Drive-Thru Order",
-		}
-
+		},
 		order_que: [
 			"Coffee", 
 			"Croissant", 
 			"Pink Drink", 
-			"Protein Bistro Box"
+			"Protein Bistro Box",
 			"Caramel Frappe"
 		]
-	}
-
+	},
 	lobby: {
 		partners: {
 			Isobelle: "Lobby Register",
 			Hailey: "Lobby Bar"
-		}
-
+		},
 		order_que: [
 			"Pound of Sumatra",
 			"Iced Cold Brew",
@@ -33,14 +30,12 @@ starbucks_college_plaza = {
 			"Bacon Gouda Sandwich",
 			"Dopio Espresso"
 		]
-	}
-
+	},
 	mobile_order: [
 		"Cheese Danish",
 		"Iced Caramel Machiato",
 		"Blue Berry Oatmeal"
-		]
-
+	],
 	other_partners: {
 		Christina: "Shift Supervisor",
 		Sarah: "Store Support"
