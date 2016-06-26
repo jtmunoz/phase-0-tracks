@@ -46,11 +46,17 @@ result = ''
 # 	puts str
 end
 
-#puts "#{change_letter("Felicia")}","#{change_letter("Torres")}"
-"#{change_letter("Felicia")}"
-"#{change_letter("Torres")}"
-puts "#{name_swapping("#{change_letter("Felicia")}", "#{change_letter("Torres")}")}"
 #puts change_vowel("zzzz")
+
+#puts "#{change_letter("Felicia")}","#{change_letter("Torres")}"
+
+scrambled_first = "#{change_letter("Felicia")}"
+scrambled_last = "#{change_letter("Torres")}"
+#puts "#{name_swapping("#{scrambled_first}", "#{scrambled_last}")}"
+puts scrambled_first
+puts scrambled_last
+
+p name_swapping("#{scrambled_first}", "#{scrambled_last}")
 
 # and all of the consonants (everything else besides the vowels) 
 #to the next consonant in the alphabet. 
