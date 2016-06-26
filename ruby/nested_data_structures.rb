@@ -42,6 +42,16 @@ starbucks_college_plaza = {
 	}
 }
 
+#p starbucks_college_plaza
+#Prints the second item from the mobile order list
+p starbucks_college_plaza[:mobile_order][1]
+# Reverse the order que for the lobby due to a mistake
+p starbucks_college_plaza[:lobby][:order_que].reverse
+# Change the caramel frappe in the drive thru to caramel fappucino, that's McDonals duhhhh
+p starbucks_college_plaza[:drive_thru][:order_que].delete_if {|drink| drink == "Caramel Frappe"} << "Caramel Frappucino"
+# Send Sarah home
+p starbucks_college_plaza[:other_partners].delete(:Sarah)
+
 #print a few individual pieces of deeply nested dat from the structure
 #showing that you know how to use multiple indexes or hash keys (or both) 
 # access nested items. Try to demonstrate a few different types of access.
