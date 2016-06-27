@@ -55,8 +55,10 @@ end
 
 #puts "#{change_letter("Felicia")}","#{change_letter("Torres")}"
 
-scrambled_first = "#{change_letter("Felicia")}"
-scrambled_last = "#{change_letter("Torres")}"
+
+#scrambled_first = "#{change_letter("Felicia")}"
+#scrambled_last = "#{change_letter("Torres")}"
+
 
 #puts "#{name_swapping("#{scrambled_first}", "#{scrambled_last}")}"
 #puts scrambled_first
@@ -109,17 +111,56 @@ end
 #Let the user do this repeatedly until they decide to quit by typing 'quit'.
 #(They might just hit Enter to continue.)
 
-valid_input = false
 
-until valid_input
 
 puts "Can I have your first name please?"
-first_name = gets.chomp
+  first_name = gets.chomp
 
 puts "Thanks you #{first_name}, Can I please have your last name?"
-last_name = gets.chomp
+  last_name = gets.chomp
 
-puts changed_name("#{first_name}", "#{last_name}")
+scrambled_first = "#{change_letter("#{first_name}")}"
+scrambled_last = "#{change_letter("#{last_name}")}"
+
+#puts changed_name("#{first_name}", "#{last_name}")
+
+spy_info = Hash.new
+spy_info = {
+  real_first: "#{first_name}",
+  real_last: "#{last_name}",
+  alias_first: "#{scrambled_first}",
+  alias_last: "#{scrambled_last}"
+}  
+
+p spy_info
+
+valid_input = false
+
+until valid_input 
+puts "Did you like your name? (yes or no)"
+  answer = gets.chomp
+
+  if answer == "no"
+    puts "What would you like your new name first name to be?"
+      new_first = gets.chomp
+      spy_info[:real_first] = "#{new_first}"
+
+    puts "What you like your new last name to be?"
+      new_last = gets.chomp
+      spy_info[:real_last] = "#{new_last}"
+
+
+
+    valid_input = true
+
+    else answer == "yes"
+      puts "Thanks it took a lot of work."
+  end
+end
+
+
+p spy_info
+
 
 
 
