@@ -144,10 +144,12 @@ puts "Did you like your name? (yes or no)"
     puts "What would you like your new name first name to be?"
       new_first = gets.chomp
       spy_info[:real_first] = "#{new_first}"
+      spy_info[:alias_first] = "#{change_letter("#{new_first}")}"
 
     puts "What you like your new last name to be?"
       new_last = gets.chomp
       spy_info[:real_last] = "#{new_last}"
+      spy_info[:alias_last] = "#{change_letter("#{new_last}")}"
 
 
 
