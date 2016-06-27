@@ -104,7 +104,15 @@ end
 #which is a rather odd name. Luckily, our dearest Vussit is from a country no one has ever heard of, 
 #mainly because it doesn't really exist.
 
-puts "Welcome to the Spy Name Encryptor 9000."
+#Provide a user interface that lets a user enter a name 
+#and get a fake name back. 
+#Let the user do this repeatedly until they decide to quit by typing 'quit'.
+#(They might just hit Enter to continue.)
+
+valid_input = false
+
+until valid_input
+
 puts "Can I have your first name please?"
 first_name = gets.chomp
 
