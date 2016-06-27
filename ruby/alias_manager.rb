@@ -29,27 +29,24 @@ result = ''
     end
     result += next_letter
   end
-  
   result
-
-# 	index = 0
-# 	while index < str.length
-#   		str[index] = str[index].next!
-# 		current_letter = str[index].next!
-# 			if current_letter == 'z'
-#      			next_letter = 'a'
-#    		elsif current_letter == ' '
-#      			next_letter = ' '
-#      		else
-#      			next_letter = current_letter.next
-#   			end
-#
-#   			index += 1
-# 	end
-# 	puts str
 end
 
-
+#   index = 0
+#   while index < str.length
+#       str[index] = str[index].next!
+#     current_letter = str[index].next!
+#       if current_letter == 'z'
+#           next_letter = 'a'
+#       elsif current_letter == ' '
+#           next_letter = ' '
+#         else
+#           next_letter = current_letter.next
+#         end
+#
+#         index += 1
+#   end
+#   puts str
 
 #puts change_vowel("zzzz")
 
@@ -132,7 +129,7 @@ spy_info = {
   alias_last: "#{scrambled_last}"
 }  
 
-p spy_info
+#p spy_info
 
 valid_input = false
 
@@ -151,21 +148,26 @@ puts "Did you like your name? (yes or no)"
       spy_info[:real_last] = "#{new_last}"
       spy_info[:alias_last] = "#{change_letter("#{new_last}")}"
 
-
-
     valid_input = true
 
     else answer == "yes"
       puts "Thanks it took a lot of work."
+    valid_input = true
   end
 end
 
+#p spy_info
 
-p spy_info
+puts "Error"
+puts "Error..."
+puts "..."
+puts "--Transmission Intercepted--"
+puts "This is the most evil organization ever!"
+puts "We know that Agent #{spy_info[:alias_last]} is according our research."
 
-
-
-
+spy_info.each do |id, name|
+  puts "In acutality #{id} name is #{name}."
+end
 
 
 
