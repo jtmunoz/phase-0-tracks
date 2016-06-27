@@ -11,6 +11,9 @@ end
 #puts name_swapping("potato", "mashed")
 
 #Changing all of the vowels (a, e, i, o, or u) to the next vowel in 'aeiou'
+# and all of the consonants (everything else besides the vowels) 
+#to the next consonant in the alphabet. 
+#So 'a' would become 'e', 'u' would become 'a', and 'd' would become 'f'.
 
 def change_letter(word)
 result = ''  
@@ -46,21 +49,30 @@ result = ''
 # 	puts str
 end
 
+
+
 #puts change_vowel("zzzz")
 
 #puts "#{change_letter("Felicia")}","#{change_letter("Torres")}"
 
 scrambled_first = "#{change_letter("Felicia")}"
 scrambled_last = "#{change_letter("Torres")}"
+
 #puts "#{name_swapping("#{scrambled_first}", "#{scrambled_last}")}"
-puts scrambled_first
-puts scrambled_last
+#puts scrambled_first
+#puts scrambled_last
 
-p name_swapping("#{scrambled_first}", "#{scrambled_last}")
+#p name_swapping("#{scrambled_first}", "#{scrambled_last}")
 
-# and all of the consonants (everything else besides the vowels) 
-#to the next consonant in the alphabet. 
-#So 'a' would become 'e', 'u' would become 'a', and 'd' would become 'f'.
+def changed_name(first, last)
+  x = "#{change_letter("#{first}")}"
+  y = "#{change_letter("#{last}")}"
+  y +" "+ x
+end
+
+#puts changed_name("water", "can")
+
+
 
 #If you get really and truly stuck, just write an alias method that loops 
 #through the original name and changes the letters somehow, 
@@ -91,3 +103,22 @@ p name_swapping("#{scrambled_first}", "#{scrambled_last}")
 #{}"Felicia Torres" will become "Vussit Gimodoe", 
 #which is a rather odd name. Luckily, our dearest Vussit is from a country no one has ever heard of, 
 #mainly because it doesn't really exist.
+
+puts "Welcome to the Spy Name Encryptor 9000."
+puts "Can I have your first name please?"
+first_name = gets.chomp
+
+puts "Thanks you #{first_name}, Can I please have your last name?"
+last_name = gets.chomp
+
+puts changed_name("#{first_name}", "#{last_name}")
+
+
+
+
+
+
+
+
+
+
