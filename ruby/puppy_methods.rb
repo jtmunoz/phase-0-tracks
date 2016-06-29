@@ -38,8 +38,10 @@ spot.dog_year(10)
 #jordan= Puppy.new
 
 class Kitty
+	attr_accessor: new_kitty
 	def initialize
 		puts "Meow, Meow, Meow"
+
 	end
 
 	def milk
@@ -50,3 +52,23 @@ class Kitty
 		puts "I don't like dogs"
 	end
 end
+
+#Use a loop to make 50 instances of your class.
+n = 0
+while n < 50
+	kitty_instance = []
+	new_kitty = Kitty.new
+	new_kitty.dogs
+	new_kitty.milk
+	n += 1
+	
+end
+
+
+# new_kitty
+#Modify your loop so that it stores all of the instances in a data structure.
+
+
+
+#Iterate over that data structure using .each and call the instance methods you wrote on each instance. So if you wrote a Gymnast class, this is where you'd call .flip and .jump on each of your instances of Gymnast.
+
