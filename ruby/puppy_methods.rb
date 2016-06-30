@@ -38,7 +38,7 @@ spot.dog_year(10)
 #jordan= Puppy.new
 
 class Kitty
-	attr_accessor: new_kitty
+#	attr_accessor: new_kitty
 	def initialize
 		puts "Meow, Meow, Meow"
 
@@ -58,11 +58,13 @@ n = 0
 while n < 50
 	kitty_instance = []
 	new_kitty = Kitty.new
-	new_kitty.dogs
-	new_kitty.milk
+#	new_kitty.dogs
+#	new_kitty.milk
 	n += 1
-	
+#	kitty_instance 
 end
+
+ p kitty_instance.insert(-1, "der")
 
 
 # new_kitty
