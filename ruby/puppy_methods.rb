@@ -66,23 +66,23 @@ while n < 50
 	n += 1 
 end
 
-p kitty.empty?
-p kitty[-1]
+# testing 
+#p kitty.empty?
+#p kitty[-1]
 
 
- #p kitty_instance.insert(-1, "der")
-# p kitty_instance.empty?
-
+#Iterate over that data structure using .each and call the instance methods you wrote on each instance. So if you wrote a Gymnast class, this is where you'd call .flip and .jump on each of your instances of Gymnast.
 kitty.each do |milk, dogs|
 	 hunter.milk
 	 hunter.dogs
 end
 
-kitty
+
+
  
 
 
 
 
-#Iterate over that data structure using .each and call the instance methods you wrote on each instance. So if you wrote a Gymnast class, this is where you'd call .flip and .jump on each of your instances of Gymnast.
+
 
