@@ -40,7 +40,7 @@ spot.dog_year(10)
 class Kitty
 #	attr_accessor: new_kitty
 	def initialize
-		puts "Meow, Meow, Meow"
+		p "Meow, Meow, Meow"
 
 	end
 
@@ -53,22 +53,34 @@ class Kitty
 	end
 end
 
-#Use a loop to make 50 instances of your class.
+# Use a loop to make 50 instances of your class.
+# Modify your loop so that it stores all of the instances in a data structure.
+# test to see if data stored in array
+
+kitty = Array.new(50)
+
 n = 0
 while n < 50
-	kitty_instance = []
-	new_kitty = Kitty.new
-#	new_kitty.dogs
-#	new_kitty.milk
-	n += 1
-#	kitty_instance 
+	hunter = Kitty.new
+	kitty.push hunter
+	n += 1 
 end
 
- p kitty_instance.insert(-1, "der")
+p kitty.empty?
+p kitty[-1]
 
 
-# new_kitty
-#Modify your loop so that it stores all of the instances in a data structure.
+ #p kitty_instance.insert(-1, "der")
+# p kitty_instance.empty?
+
+kitty.each do |milk, dogs|
+	 hunter.milk
+	 hunter.dogs
+end
+
+kitty
+ 
+
 
 
 
