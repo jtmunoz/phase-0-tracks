@@ -3,7 +3,7 @@
 #accessed and updated in various ways.
 
 class TodoList
-	def initialize(list)
-		@list = list
+	def initialize(arr)
+		@arr = arr
 	end
 end
