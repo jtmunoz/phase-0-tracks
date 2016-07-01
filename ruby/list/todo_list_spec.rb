@@ -1,3 +1,10 @@
+#The class itself isn't anything fancy -- 
+#Run the tests.
+# Resolve any errors you see and add code that will make all of the tests pass.
+# Work on one test at a time until you've made it all the way to "green" (all tests passing).
+
+require_relative 'todolist'
+
 describe TodoList do
   let(:list) { TodoList.new(["do the dishes", "mow the lawn"]) }
 
