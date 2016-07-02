@@ -1,29 +1,36 @@
 class Santa
-#An initialize method that prints "Initializing Santa instance ...".
-def initialize(name)
+#An initialize method that prints "Initializing Santa instance ..."
+# gender, which will be a string passed in on initialization
+# ethnicity, which will be a string passed in on initialization
+def initialize(name, gender, ethnicity)
 	puts "Initializing Santa instance ...."
 	@name = name
-	@location = "North Pole"
-
+	@location = "the North Pole"
+	@gender = gender
+	@ethnicity = ethnicity
 end
-#A speak method that will print "Ho, ho, ho! Haaaappy holidays!" 
+
+	#A speak method that will print "Ho, ho, ho! Haaaappy holidays!" 
 	def speak
 		puts "#{@name} said Ho, ho, ho! Haaaappy holidays!"
 	end
 
-#An eat_milk_and_cookies method that takes a cookie type (example: "snickerdoodle") as a parameter and prints "That was a good <type of cookie here>!" 
+	#An eat_milk_and_cookies method that takes a cookie type (example: "snickerdoodle") as a parameter and prints "That was a good <type of cookie here>!" 
 	def eat_milk_and_cookies(cookie)
 		puts "That was a good #{cookie}. Just as good as the #{cookie}s from the #{@location}."
 	end
 
 
-
-
-#Add a bit of code below your class declaration to check that you're able to initialize a Santa instance and call its methods.
+	#Add a bit of code below your class declaration to check that you're able to initialize a Santa instance and call its methods.
+	def about
+		puts "Here is our potential Santa for the season"
+		puts "Their name is #{@name}"
+		puts "They identify themself as #{@gender}"
+		puts "They are from #{@location}"
+	end
 end
 
-nick = Santa.new("Bob")
-puts nick.speak
-puts nick.eat_milk_and_cookies("oreo")
-
- 
+new_santa = Santa.new("Bob", "Female", "Japanese")
+puts new_santa.speak
+puts new_santa.eat_milk_and_cookies("oreo")
+puts new_santa.about 
