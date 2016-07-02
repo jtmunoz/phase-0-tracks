@@ -24,6 +24,13 @@ end
 	def reindeer_ranking
 		reindeer = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
 	end
+
+	# age, which is not passed in on initialization and defaults to 0
+	def age(x)
+		santa_age = 0
+		santa_age = x
+	end
+
 	#Add a bit of code below your class declaration to check that you're able to initialize a Santa instance and call its methods.
 	def about
 		puts "Here is our potential Santa for the season"
@@ -36,5 +43,6 @@ end
 new_santa = Santa.new("Bob", "Female", "Japanese")
 puts new_santa.speak
 puts new_santa.eat_milk_and_cookies("oreo")
-puts new_santa.about 
 puts new_santa.reindeer_ranking.reverse
+puts new_santa.about 
+
