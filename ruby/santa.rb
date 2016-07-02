@@ -20,7 +20,10 @@ end
 		puts "That was a good #{cookie}. Just as good as the #{cookie}s from the #{@location}."
 	end
 
-
+	# reindeer_ranking, an array of reindeer from most preferred to least preferred
+	def reindeer_ranking
+		reindeer = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
+	end
 	#Add a bit of code below your class declaration to check that you're able to initialize a Santa instance and call its methods.
 	def about
 		puts "Here is our potential Santa for the season"
@@ -34,3 +37,4 @@ new_santa = Santa.new("Bob", "Female", "Japanese")
 puts new_santa.speak
 puts new_santa.eat_milk_and_cookies("oreo")
 puts new_santa.about 
+puts new_santa.reindeer_ranking.reverse
