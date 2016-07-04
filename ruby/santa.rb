@@ -2,9 +2,9 @@ class Santa
 	#An initialize method that prints "Initializing Santa instance ..."
 	# gender, which will be a string passed in on initialization
 	# ethnicity, which will be a string passed in on initialization
-	def initialize(gender, ethnicity)
+	def initialize(name , gender, ethnicity)
 		puts "Initializing Santa instance ...."
-		#@name = name
+		@name = name
 		@location = "the North Pole"
 		@gender = gender
 		@ethnicity = ethnicity
@@ -21,10 +21,13 @@ class Santa
 		end
 
 		def bar(location)
-			puts "#{@name} is making their way to the brewery in #{@location}"
+			
+			puts "#{@name} is making their way to the brewery in #{@location}."
+			
+		end
 		#An eat_milk_and_cookies method that takes a cookie type (example: "snickerdoodle") as a parameter and prints "That was a good <type of cookie here>!" 
 		def eat_milk_and_cookies(cookie)
-			puts "That was a good #{cookie}. Just as good as the #{cookie}s from the #{@location}."
+			puts "While at the brewery in #{@location} they ate a good #{cookie}. #{@name} exclaimed, 'These are the best #{cookie}s in #{@location}!'"
 		end
 		
 		# reindeer_ranking, an array of reindeer from most preferred to least preferred
@@ -33,13 +36,9 @@ class Santa
 		end
 		
 		# age, which is not passed in on initialization and defaults to 0
+		
 		def age(x)
-			
-			if x > 0
-				 x
-			else x < 0 
-				 x
-			end
+			x
 		end
 
 		#getter methods for attributes
@@ -59,34 +58,46 @@ class Santa
 			@ethnicity
 		end
 
+		#Setter methods
+		def name=(new_name)
+			@name = new_name
+		end
+
+		#celebrate_birthday should age Santa by one year.
+		def celebrate_birthday= 
+			@age = age.to_i + 1
+		end
+
 		#Add a bit of code below your class declaration to check that you're able to initialize a Santa instance and call its methods.
 		def about
 			puts "Here is our potential Santa for the season."
 			puts "Their name is #{@name}."
 			puts "They identify themself as #{@gender}"
-			puts "They are #{@age} years young"
-
-			#puts "#{@name} is a #{age(05)} year old, #{@gender} from #{@location}."
+			puts "They are #{age(2)} years young"
+	
 		end
 end
 
-new_santa = Santa.new("Female", "Japanese")
-puts new_santa.name
-puts new_santa.speak
-puts new_santa.photos(73)
-puts new_santa.eat_milk_and_cookies("oreo")
-puts new_santa.age(27)
-puts new_santa.reindeer_ranking.reverse
-puts new_santa.about 
+new_santa = Santa.new("John", "Female", "Japanese")
+#puts new_santa.name
+new_santa.speak
+new_santa.photos(73)
+new_santa.bar("Vista")
+new_santa.name = "Bozo"
+new_santa.eat_milk_and_cookies("oreo")
+new_santa.age(2)
+new_santa.reindeer_ranking.reverse
+new_santa.about
+new_santa.celebrate_birthday 
 
 santas = []
-santas << Santa.new("agender", "black")
-santas << Santa.new("female", "Latino")
-santas << Santa.new("bigender", "white")
-santas << Santa.new("male", "Japanese")
-santas << Santa.new("female", "prefer not to say")
-santas << Santa.new("gender fluid", "mystical creature (unicorn)")
-santas << Santa.new("N/A", "N/A")
+santas << Santa.new("Al", "agender", "black")
+santas << Santa.new("Christina", "female", "Latino")
+santas << Santa.new("Chris", "bigender", "white")
+santas << Santa.new("Pat", "male", "Japanese")
+santas << Santa.new("Ehrin", "female", "prefer not to say")
+santas << Santa.new("Jo", "gender fluid", "mystical creature (unicorn)")
+santas << Santa.new("Devon", "N/A", "N/A")
 
 p santas[2]
 
