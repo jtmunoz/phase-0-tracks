@@ -33,7 +33,9 @@ class Santa
 
 		# method for taking input for the bar location
 		def bar(location)
+			@location = location
 			puts "#{@name} is making their way to the brewery in #{@location}."
+
 		end
 
 
@@ -79,9 +81,9 @@ class Santa
 			puts "Our santa from now one would love to be referred to as #{@name}."
 		end
 
-		#def age=(new_age)
-		#	@age = new_age 
-		#end
+		def age=(new_age)
+			@age = new_age 
+		end
 
 		#to be reassigned from outside the class definition.
 		def gender=(new_preference)
@@ -99,6 +101,7 @@ class Santa
 		def get_mad_at(reindeer_name)
 			@reindeer.delete(reindeer_name)
 			@reindeer << reindeer_name
+			puts "#{@name} is mad at #{reindeer_name} see, #{@reindeer}"
 		end
 
 		#Add a bit of code below your class declaration to check that you're able to initialize a Santa instance and call its methods.
@@ -107,7 +110,7 @@ class Santa
 			puts "They have changed their name to #{@name}."
 			puts "They identify themself as #{@gender}"
 			puts "They are #{age} years young"
-			puts "Soon they will be celebrating their #{celebrate_birthday(0)}th birthday,"
+			puts "Soon they will be celebrating their #{celebrate_birthday(100)}th birthday,"
 		end
 end
 
@@ -120,11 +123,13 @@ new_santa.name = "Bozo"
 new_santa.eat_milk_and_cookies("oreo")
 new_santa.age
 new_santa.reindeer_ranking.reverse
-new_santa.age 
-new_santa.celebrate_birthday(0)
-new_santa.get_mad_at("Vixen")
+new_santa.age = 100 
+new_santa.celebrate_birthday(100)
 new_santa.gender = "HEMAN"
 new_santa.about
+new_santa.age 
+new_santa.get_mad_at("Vixen")
+
 
 santas = []
 santas << Santa.new("Al", "agender", "black")
@@ -134,6 +139,5 @@ santas << Santa.new("Pat", "male", "Japanese")
 santas << Santa.new("Ehrin", "female", "prefer not to say")
 santas << Santa.new("Jo", "gender fluid", "mystical creature (unicorn)")
 santas << Santa.new("Devon", "N/A", "N/A")
-
-p santas[2]
+#p santas[2]
 
