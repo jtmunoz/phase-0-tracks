@@ -16,8 +16,9 @@ class Santa
 		@age = 0
 		@reindeer = reindeer = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
 	end
-	
-	
+		example_names = ["Jordan", "Erica", "Anika", "Rachel", "Albert", "Sandy", "Mary Lou", "Ted", "Lindsey", "Kayze", "John"]
+		example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
+		example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
 		#A speak method that will print "Ho, ho, ho! Haaaappy holidays!" 
 		def speak
 			puts "#{@name} said Ho, ho, ho! Haaaappy holidays!"
@@ -41,8 +42,6 @@ class Santa
 
 		end
 
-
-
 		#An eat_milk_and_cookies method that takes a cookie type (example: "snickerdoodle") as a parameter and prints "That was a good <type of cookie here>!" 
 		def eat_milk_and_cookies(cookie)
 			puts "While at the brewery in #{@location} they ate a good #{cookie}. #{@name} exclaimed, 'These are the best #{cookie}s in #{@location}!'"
@@ -54,13 +53,8 @@ class Santa
 		end
 		
 		#getter methods for attributes
-
 		def location
 			@location
-		end
-
-		def ethnicity
-			@ethnicity
 		end
 
 		#to be reassigned from outside the class definition.
@@ -115,4 +109,20 @@ santas << Santa.new("Ehrin", "female", "prefer not to say")
 santas << Santa.new("Jo", "gender fluid", "mystical creature (unicorn)")
 santas << Santa.new("Devon", "N/A", "N/A")
 #p santas[2]
+
+#Write a program that creates lots of Santas
+#Use our array of example genders and 
+#an array of example ethnicities
+new_santas = []
+new_santas.length.times do |i|
+	new_santas << Santa.new(example_names[i], example_genders[i], example_ethnicities[i])
+end
+
+
+p new_santas
+#Set your new Santa's age to a random number between 0 and 140.
+#No need to store your Santas in a data structure, 
+#but your program should print out the attributes of each Santa 
+#using the instance methods that give you access to that data.
+
 
