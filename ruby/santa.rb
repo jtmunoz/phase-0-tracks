@@ -1,7 +1,7 @@
 class Santa
 	#Refactor your code with attr_reader and attr_accessor.
-	attr_reader :age, :location, :gender, :ethnicity
-	attr_accessor :name
+	attr_reader :location, :ethnicity
+	attr_accessor :name, :age, :gender
 	#An initialize method that prints "Initializing Santa instance ..."
 	# gender, which will be a string passed in on initialization
 	# ethnicity, which will be a string passed in on initialization
@@ -55,31 +55,15 @@ class Santa
 		
 		#getter methods for attributes
 
-		def age
-			@age
-		end
-
 		def location
 			@location
-		end
-
-		def gender
-			@gender
 		end
 
 		def ethnicity
 			@ethnicity
 		end
 
-
-		def age=(new_age)
-			@age = new_age 
-		end
-
 		#to be reassigned from outside the class definition.
-		def gender=(new_preference)
-			@gender = new_preference
-		end
 		#celebrate_birthday should age Santa by one year.
 		def celebrate_birthday(age)
 			age = @age
