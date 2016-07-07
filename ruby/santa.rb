@@ -74,6 +74,12 @@ class Santa
 			ethnicity = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A", "Elf", "Wookie", "Orc", "Wizard", "Witch", "Klingon"].sample
 			@ethnicity = ethnicity
 		end
+
+		def new_age
+			age_arr = Array.new
+			age_arr = (1..140).to_a.sample
+			@age = age_arr
+		end
 		#Add a bit of code below your class declaration to check that you're able to initialize a Santa instance and call its methods.
 		def about
 			puts "Here is our potential Santa for the season."
@@ -84,7 +90,7 @@ class Santa
 		end
 
 		def new_about
-			puts "#{@name} identifies as #{@gender}. Their ethnicity is #{@ethnicity}."
+			puts "#{@name} identifies as #{@gender}. Their ethnicity is #{@ethnicity}. They are #{@age} years young."
 		end
 	end
 
@@ -104,8 +110,8 @@ new_santa.gender = "HEMAN"
 new_santa.about
 new_santa.age 
 new_santa.get_mad_at("Vixen")
-new_santa.example_genders
-p new_santa.gender
+new_santa.example_genders 
+new_santa.gender
 
 
 #santas = []
@@ -118,48 +124,43 @@ p new_santa.gender
 #santas << Santa.new("Devon", "N/A", "N/A")
 #p santas[2]
 
-#Write a program that creates lots of Santas
-#Use our array of example genders and 
-#an array of example ethnicities
 example_names = ["Jordan", "Erica", "Anika", "Rachel", "Albert", "Sandy", "Mary Lou", "Ted", "Lindsey", "Kayze", "John"]
-#example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A", "demigender", "enby", "FTX", "hijra", "intergender", "marverique", "nonbinary", "polygender"]
-#example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A", "Elf", "Wookie", "Orc", "Wizard", "Witch", "Klingon"]
 
+#Write a program that creates lots of Santas
 lots_of_santas = Array.new
 
 until lots_of_santas[99]
 	example_names.each do |name|
-		puts "Found a new applicant named #{example_names.sample}"
+		#puts "Found a new applicant named #{example_names.sample}"
 		lots_of_santas << Santa.new(name)
 		puts "Now we have #{lots_of_santas.length} applicants"
 		puts "-------"
 	end
 end
-	
+
+#Use our array of example genders and 	
 lots_of_santas.each do |santa|
 	santa.example_genders	
 end
-	
+
+#an array of example ethnicities	
 lots_of_santas.each do |santa|	
 	santa.example_ethnicities
 end
 
-
-p lots_of_santas[108]
-p lots_of_santas[109]
-lots_of_santas[109].new_about
-#puts "Compiling information on potential santas"
-#names.each do |name, gender, ethnicity|
-#lots_of_santas << Santa.new("#{example_names.sample}", "#{example_genders.sample}", "#{example_ethnicities.sample}")
-#lots_of_santas.to_a
-#lots_of_santas. do |sample|
-	
-#	lots_of_santas << Santa.new(example_names.sample, example_genders.sample, example_ethnicities.sample)
-#end
-
-#p lots_of_santas
 #Set your new Santa's age to a random number between 0 and 140.
-#No need to store your Santas in a data structure, 
+lots_of_santas.each do |santa|
+	santa.new_age
+end
+
 #but your program should print out the attributes of each Santa 
 #using the instance methods that give you access to that data.
+lots_of_santas.each do |santa|
+	santa.new_about
+end
+
+
+	
+
+
 
