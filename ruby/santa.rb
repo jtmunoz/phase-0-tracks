@@ -5,20 +5,18 @@ class Santa
 	#An initialize method that prints "Initializing Santa instance ..."
 	# gender, which will be a string passed in on initialization
 	# ethnicity, which will be a string passed in on initialization
-	def initialize(name , gender, ethnicity)
+	def initialize(name) #gender, ethnicity)
 		puts "Initializing Santa instance ...."
-		@name = name
+		@name = name 
 		@location = "the North Pole"
-		@gender = gender
-		@ethnicity = ethnicity
+		@gender = gender 
+		@ethnicity = ethnicity 
 		#@drink = drink
 		# age, which is not passed in on initialization and defaults to 0
 		@age = 0
 		@reindeer = reindeer = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
 	end
-		example_names = ["Jordan", "Erica", "Anika", "Rachel", "Albert", "Sandy", "Mary Lou", "Ted", "Lindsey", "Kayze", "John"]
-		example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
-		example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
+		
 		#A speak method that will print "Ho, ho, ho! Haaaappy holidays!" 
 		def speak
 			puts "#{@name} said Ho, ho, ho! Haaaappy holidays!"
@@ -73,6 +71,15 @@ class Santa
 			puts "#{@name} is mad at #{reindeer_name} see, #{@reindeer}"
 		end
 
+		
+
+		def example_genders
+			example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A", "demigender", "enby", "FTX", "hijra", "intergender", "marverique", "nonbinary", "polygender"]
+		end
+
+		def example_ethnicities
+			example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A", "Elf", "Wookie", "Orc", "Wizard", "Witch", "Klingon"]
+		end
 		#Add a bit of code below your class declaration to check that you're able to initialize a Santa instance and call its methods.
 		def about
 			puts "Here is our potential Santa for the season."
@@ -81,9 +88,14 @@ class Santa
 			puts "They are #{age} years young"
 			puts "Soon they will be celebrating their #{celebrate_birthday(100)}th birthday,"
 		end
+
+		def new_about
+			puts "#{@name} identifies as #{gender}"
+		end
 end
 
-new_santa = Santa.new("John", "Female", "Japanese")
+
+new_santa = Santa.new("John")#, "Female", "Japanese")
 new_santa.speak
 new_santa.photos(73)
 new_santa.beverage("IPA")
@@ -100,29 +112,42 @@ new_santa.age
 new_santa.get_mad_at("Vixen")
 
 
-santas = []
-santas << Santa.new("Al", "agender", "black")
-santas << Santa.new("Christina", "female", "Latino")
-santas << Santa.new("Chris", "bigender", "white")
-santas << Santa.new("Pat", "male", "Japanese")
-santas << Santa.new("Ehrin", "female", "prefer not to say")
-santas << Santa.new("Jo", "gender fluid", "mystical creature (unicorn)")
-santas << Santa.new("Devon", "N/A", "N/A")
+#santas = []
+#santas << Santa.new("Al", "agender", "black")
+#santas << Santa.new("Christina", "female", "Latino")
+#santas << Santa.new("Chris", "bigender", "white")
+#santas << Santa.new("Pat", "male", "Japanese")
+#santas << Santa.new("Ehrin", "female", "prefer not to say")
+#santas << Santa.new("Jo", "gender fluid", "mystical creature (unicorn)")
+#santas << Santa.new("Devon", "N/A", "N/A")
 #p santas[2]
 
 #Write a program that creates lots of Santas
 #Use our array of example genders and 
 #an array of example ethnicities
-new_santas = []
-new_santas.length.times do |i|
-	new_santas << Santa.new(example_names[i], example_genders[i], example_ethnicities[i])
+example_names = ["Jordan", "Erica", "Anika", "Rachel", "Albert", "Sandy", "Mary Lou", "Ted", "Lindsey", "Kayze", "John"]
+
+lots_of_santas = Array.new
+
+until lots_of_santas[99]
+	example_names.each do |name|
+		puts "Found a new applicant named #{example_names.sample}"
+		lots_of_santas << Santa.new(name)
+		puts "Now we have #{lots_of_santas.length} applicants"
+	end
 end
+#puts "Compiling information on potential santas"
+#names.each do |name, gender, ethnicity|
+#lots_of_santas << Santa.new("#{example_names.sample}", "#{example_genders.sample}", "#{example_ethnicities.sample}")
+#lots_of_santas.to_a
+#lots_of_santas. do |sample|
+	
+#	lots_of_santas << Santa.new(example_names.sample, example_genders.sample, example_ethnicities.sample)
+#end
 
-
-p new_santas
+#p lots_of_santas
 #Set your new Santa's age to a random number between 0 and 140.
 #No need to store your Santas in a data structure, 
 #but your program should print out the attributes of each Santa 
 #using the instance methods that give you access to that data.
-
 
