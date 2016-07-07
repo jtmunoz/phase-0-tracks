@@ -1,7 +1,7 @@
 class Santa
 	#Refactor your code with attr_reader and attr_accessor.
-	attr_reader :location, :ethnicity
-	attr_accessor :name, :age, :gender
+	attr_reader :location
+	attr_accessor :name, :age, :gender, :ethnicity
 	#An initialize method that prints "Initializing Santa instance ..."
 	# gender, which will be a string passed in on initialization
 	# ethnicity, which will be a string passed in on initialization
@@ -50,12 +50,6 @@ class Santa
 			reindeer = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
 		end
 		
-		#getter methods for attributes
-		def location
-			@location
-		end
-
-		#to be reassigned from outside the class definition.
 		#celebrate_birthday should age Santa by one year.
 		def celebrate_birthday(age)
 			age = @age
@@ -69,16 +63,16 @@ class Santa
 			@reindeer.delete(reindeer_name)
 			@reindeer << reindeer_name
 			puts "#{@name} is mad at #{reindeer_name} see, #{@reindeer}"
-		end
-
-		
+		end		
 
 		def example_genders
-			example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A", "demigender", "enby", "FTX", "hijra", "intergender", "marverique", "nonbinary", "polygender"]
+			gender = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A", "demigender", "enby", "FTX", "hijra", "intergender", "marverique", "nonbinary", "polygender"].sample
+			@gender = gender
 		end
 
 		def example_ethnicities
-			example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A", "Elf", "Wookie", "Orc", "Wizard", "Witch", "Klingon"]
+			ethnicity = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A", "Elf", "Wookie", "Orc", "Wizard", "Witch", "Klingon"].sample
+			@ethnicity = ethnicity
 		end
 		#Add a bit of code below your class declaration to check that you're able to initialize a Santa instance and call its methods.
 		def about
@@ -90,9 +84,9 @@ class Santa
 		end
 
 		def new_about
-			puts "#{@name} identifies as #{gender}"
+			puts "#{@name} identifies as #{@gender}. Their ethnicity is #{@ethnicity}."
 		end
-end
+	end
 
 
 new_santa = Santa.new("John")#, "Female", "Japanese")
@@ -110,6 +104,8 @@ new_santa.gender = "HEMAN"
 new_santa.about
 new_santa.age 
 new_santa.get_mad_at("Vixen")
+new_santa.example_genders
+p new_santa.gender
 
 
 #santas = []
@@ -126,6 +122,8 @@ new_santa.get_mad_at("Vixen")
 #Use our array of example genders and 
 #an array of example ethnicities
 example_names = ["Jordan", "Erica", "Anika", "Rachel", "Albert", "Sandy", "Mary Lou", "Ted", "Lindsey", "Kayze", "John"]
+#example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A", "demigender", "enby", "FTX", "hijra", "intergender", "marverique", "nonbinary", "polygender"]
+#example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A", "Elf", "Wookie", "Orc", "Wizard", "Witch", "Klingon"]
 
 lots_of_santas = Array.new
 
@@ -134,8 +132,22 @@ until lots_of_santas[99]
 		puts "Found a new applicant named #{example_names.sample}"
 		lots_of_santas << Santa.new(name)
 		puts "Now we have #{lots_of_santas.length} applicants"
+		puts "-------"
 	end
 end
+	
+lots_of_santas.each do |santa|
+	santa.example_genders	
+end
+	
+lots_of_santas.each do |santa|	
+	santa.example_ethnicities
+end
+
+
+p lots_of_santas[108]
+p lots_of_santas[109]
+lots_of_santas[109].new_about
 #puts "Compiling information on potential santas"
 #names.each do |name, gender, ethnicity|
 #lots_of_santas << Santa.new("#{example_names.sample}", "#{example_genders.sample}", "#{example_ethnicities.sample}")
