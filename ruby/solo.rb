@@ -17,7 +17,8 @@ class Order
 		#puts "What can I get started for you?"
 		@name = name
 		@number_of_drinks = 0
-		@beans = ["Pike", "Veranda", "Sumatra", "Decaf Espresso"]
+		#@beans = ["Pike", "Veranda", "Sumatra", "Decaf Espresso"]
+		@favorite = favorite
 	end
 
 	#gets name for order
@@ -43,10 +44,11 @@ class Order
 
 	#user decides favorite coffee from array
 	def coffee_choice
-		puts "What is your favorite coffee?"
-		p @beans
+		puts "What is your favorite type of coffee?"
+		#p @beans
 		favorite = gets.chomp
-
+		@favorite = favorite
+		
 		#@beans.delete_if{|beans| beans != favorite}
 		#@beans
 		#puts "Would you like to buy any #{favorite}?"
@@ -56,7 +58,7 @@ class Order
 	#prints out information
 	def about
 		puts "I have a #{@number_of_drinks} drinks for #{@name}."
-		puts "Their favorite coffe is @beans.delete_if(@favorite)"
+		puts "Their favorite coffe is #{@favorite}"
 	end
 
 
@@ -85,25 +87,58 @@ end
 puts "How many orders would you like to place?"
 orders = gets.chomp
 
-large_line = Array.new("#{orders}".to_i)
+large_line = Array.new("#{orders}".to_i, Order.new)
+
+
+p large_line.empty?
 p large_line
 
+#until large_line 
+large_line.each do |new_order|
+	new_order.order_name
+	new_order.how_many
+	new_order.free_one
+	new_order.coffee_choice
+	new_order.about
+end
+
+p large_line
+
+
+#until large_line = orders
+#	puts "Now we have #{large_line.length} orders."	
+
+#end
 #large_line << Order.new
+
+
+
+
+
+
 #valid_input = false
-#
+
+
+
 #until valid_input
 #	puts "Would you like to place an order? Type done when ready"
 #	answer = gets.chomp
-#	
-#	if answer == "yes"
-#		new_order = Order.new
-#		large_line << Order.new
-#		valid_input = true
-#	elsif answer == "done"
-#		valid_input = true
-#	else answer == "no"	
-#		puts "Are you sure?"
-#	end
+	#large_line = Array.new("#{orders}".to_i)
+#p large_line
+#	u
+	
+
+
+
+	#if answer == "yes"
+	#	Order.new
+	#	large_Line << Order.new
+	#	valid_input = true
+	#elsif answer == "done"
+	#	valid_input = true
+	#else answer == "no"	
+	#	puts "Are you sure?"
+	#end
 #end
 
 
