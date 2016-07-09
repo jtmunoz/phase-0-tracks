@@ -10,7 +10,7 @@ class Order
 
 	attr_reader  :beans
 
-	attr_accessor :name, :number_of_drinks
+	attr_accessor :name, :number_of_drinks, :favorite
 	
 	#number of drinks starts off as 0,
 	def initialize
@@ -46,26 +46,66 @@ class Order
 		puts "What is your favorite coffee?"
 		p @beans
 		favorite = gets.chomp
+
 		#@beans.delete_if{|beans| beans != favorite}
 		#@beans
-
+		#puts "Would you like to buy any #{favorite}?"
 	end
 
 
 	#prints out information
 	def about
 		puts "I have a #{@number_of_drinks} drinks for #{@name}."
+		puts "Their favorite coffe is @beans.delete_if(@favorite)"
 	end
 
 
 end
 
 
-new_drink = Order.new
-new_drink.order_name
-new_drink.how_many
-new_drink.free_one
-new_drink.coffee_choice
+#new_drink = Order.new
+#new_drink.order_name
+#new_drink.how_many
+#new_drink.free_one
+#new_drink.coffee_choice
+#new_drink.about
+#p new_drink
 
-new_drink.about
-p new_drink
+#Your user should be allowed to create as many instances of your class 
+
+#Prompt the user for each attribute, and don't forget to convert their input to the appropriate data type. 
+#Store these class instances in an array.
+#When the user indicates that they are finished creating instances, 
+#loop through the array and print out the attributes of each instance 
+#as a confirmation message of what was created.
+
+
+
+
+puts "How many orders would you like to place?"
+orders = gets.chomp
+
+large_line = Array.new("#{orders}".to_i)
+p large_line
+
+#large_line << Order.new
+#valid_input = false
+#
+#until valid_input
+#	puts "Would you like to place an order? Type done when ready"
+#	answer = gets.chomp
+#	
+#	if answer == "yes"
+#		new_order = Order.new
+#		large_line << Order.new
+#		valid_input = true
+#	elsif answer == "done"
+#		valid_input = true
+#	else answer == "no"	
+#		puts "Are you sure?"
+#	end
+#end
+
+
+
+
