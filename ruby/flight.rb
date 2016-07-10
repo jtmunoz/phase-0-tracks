@@ -11,3 +11,9 @@ end
 class Plane
 	include Flight
 end
+
+tweety = Bird.new
+tweety.take_off(800)
+
+plane = Plane.new
+plane.take_off(30000)
