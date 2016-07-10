@@ -8,9 +8,9 @@
 # an order class
 class Order
 
-	attr_reader  :beans
+	attr_reader  :beans, :name, :number_of_drinks, :favorite
 
-	attr_accessor :name, :number_of_drinks, :favorite
+	attr_accessor  :large_line
 	
 	#number of drinks starts off as 0,
 	def initialize
@@ -46,8 +46,8 @@ class Order
 	def coffee_choice
 		puts "What is your favorite type of coffee?"
 		#p @beans
-		favorite = gets.chomp
-		@favorite = favorite
+		@favorite= gets.chomp
+		#@favorite = favorite
 		
 		#@beans.delete_if{|beans| beans != favorite}
 		#@beans
@@ -61,7 +61,9 @@ class Order
 		puts "Their favorite coffe is #{@favorite}"
 	end
 
-
+	def new_about
+		puts "#{@name} ordered #{number_of_drinks} drinks."
+		puts "Their favorite coffe to buy is #{@favorite}"
 end
 
 
@@ -82,37 +84,67 @@ end
 #as a confirmation message of what was created.
 
 
-
-
-puts "How many orders would you like to place?"
-orders = gets.chomp
-
-large_line = Array.new("#{orders}".to_i, Order.new)
-
-
-p large_line.empty?
-p large_line
-
-#until large_line 
-large_line.each do |new_order|
-	new_order.order_name
-	new_order.how_many
-	new_order.free_one
-	new_order.coffee_choice
-	new_order.about
-end
-
-p large_line
-
-
-#until large_line = orders
-#	puts "Now we have #{large_line.length} orders."	
-
+#puts "Hi, how many orders would you like to place"
+#answer = gets.chomp
+#
+#large_line = Array.new()
+#
+#until large_line["#{answer}".to_i]
+#	large_line << new_order = Order.new
 #end
-#large_line << Order.new
+#end
+#p large_line[1]
 
+#valid_input = false
+#
+#until valid_input
+#
+#	puts "Are you going to place a large order?"
+#	answer = gets.chomp
+#	
+#	
+#	
+#	#p large_line.empty?
+#	#p large_line
+#		if answer == "yes"
+#			puts "How many orders would you like to place?"
+#				orders = gets.chomp
+#	
+#			large_line = Array.new("#{orders}".to_i, Order.new)
+#				
+#				large_line.each do |new_order|
+#					new_order.order_name
+#					new_order.how_many
+#					new_order.free_one
+#					new_order.coffee_choice
+#					new_order.about
+#				end
+#
+#			valid_input = true
+#			p large_line
+#		elsif answer == "finished"
+#			valid_input = true
+#
+#		else answer == "no"
+#			puts "Are you sure I can't get an order started?"
+#		end	
+#	end
+#p large_line
+#
+##large_line.each do |order|
+##	order.new_about
+##end
+#end
+##until large_line = orders
+##	puts "Now we have #{large_line.length} orders."	
+#
+##end
+##large_line << Order.new
+#p @large_line.empty?
 
-
+#large_line.each do |order|
+#	order.new_about
+#end
 
 
 
@@ -140,6 +172,66 @@ p large_line
 	#	puts "Are you sure?"
 	#end
 #end
+
+#valid_input = false
+#
+#until valid_input
+#
+#	puts "Are you going to place a large order?"
+#	answer = gets.chomp
+#	
+#	
+#	
+#	#p large_line.empty?
+#	#p large_line
+#		if answer == "yes"
+#			puts "How many orders would you like to place?"
+#				orders = gets.chomp
+#	
+#			large_line = Array.new("#{orders}".to_i, Order.new)
+#				
+#				large_line.each do |new_order|
+#					new_order.order_name
+#					new_order.how_many
+#					new_order.free_one
+#					new_order.coffee_choice
+#					new_order.about
+#				end
+#
+#			valid_input = true
+#			
+#		elsif answer == "finished"
+#			valid_input = true
+#
+#		else answer == "no"
+#			puts "Are you sure I can't get an order started?"
+#		end	
+#	end
+#p large_line
+#
+##large_line.each do |order|
+##	order.new_about
+##end
+#end
+##until large_line = orders
+##	puts "Now we have #{large_line.length} orders."	
+#
+##end
+##large_line << Order.new
+#p @large_line.empty?
+#
+#large_line.each do |order|
+#	order.new_about
+#end
+
+large_line = []
+
+puts "How many would you like to start"
+answer = gets.chomp
+answer.to_i
+
+large_line = 2.times.collect {|i| Order.new(i)}
+end
 
 
 
