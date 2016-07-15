@@ -4,3 +4,11 @@
 //["long phrase","longest phrase","longer phrase"], 
 //it would return "longest phrase"
 
+//new array to store words
+var word_storage = ["long phrase", "longest phrase", "longer phrase"];
+
+console.log(word_storage);
+//function to take in array as a parameter
+
+// sort through the array
+
