@@ -5,10 +5,24 @@
 //it would return "longest phrase"
 
 //new array to store words
+
 var word_storage = ["long phrase", "longest phrase", "longer phrase"];
+//console.log(word_storage);
 
+word_storage.push("even longer phrase")
 console.log(word_storage);
-//function to take in array as a parameter
+//console.log(word_storage.length);
 
+
+//function/method to take in array as a parameter
+//use a loop to find the length of each item
+//print the item with the longest length
+function sort(arr){
+
+	console.log(arr.length);
+}
+
+//sort(word_storage);
 // sort through the array
 
+console.log("phrase".length);
