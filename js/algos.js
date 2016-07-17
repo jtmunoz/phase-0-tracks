@@ -7,16 +7,16 @@
 //new array to store words
 var wordStorage = ["long phrase", "longest phrase", "longer phrase"];
 
-console.log(wordStorage);
+//console.log(wordStorage);
 
-wordStorage.push("even longer phrase")
+//wordStorage.push("even longer phrase")
 wordStorage.push("phrase")
 
 //console.log(wordStorage);
 //console.log(wordStorage.length);
 
 
-console.log(wordStorage);
+//console.log(wordStorage);
 
 //function takes in an array and prints the longest 
 function printLongest(argument){
@@ -27,7 +27,7 @@ function printLongest(argument){
 	
 	//variable is passed throug a loop to find length of each item
 	arr.forEach(function(item,index){
-	console.log(item.length);
+	item.length;
 	});
 	
 	//variable is sorted by length of String in descending order
@@ -84,11 +84,34 @@ function compareTwo(first, second){
 //do so is relatively straightforward.)
 
 
+var arr = []
 
+function getRandomInt() {
+    return Math.floor(Math.random() * (10 - 1 + 1)) + 1;
+}
 
 //Write a function that takes an integer for length,
 function wordBuilder(number){
+
+	//argument creates length of array
+	arr.length = number;
 	
+	//fills the array with string
+	arr.fill(number);
+	//arr.fill(Math.random().toString(36).replace(/[^a-z]+/g, '').substr(getRandomInt()));
+	
+	//iterate of each item to determine random letters
+	arr.forEach(function(item, index, array){
+		arr.fill((Math.random().toString(36).replace(/[^a-z]+/g, '').substr(getRandomInt())))
+	});
+	
+	//iterate over each item to determine random by random integer
+	arr.forEach(function(item, index, array){
+		//console.log(item, index)
+	});
+	
+	//returns the array
+	return arr;
 }
 
 
@@ -98,3 +121,5 @@ console.log(printLongest(wordStorage));
 //console.log(wordStorage.sort(function (a, b) { return b.length - a.length })[0]);
 
 (compareTwo(objectUno, objectDos));
+
+console.log(wordBuilder(3));
