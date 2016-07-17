@@ -56,20 +56,41 @@ var objectDos = {name: "Tamir", age: 54};
 //function that takes two objects
 function compareTwo(first, second){
 
-//compares the keys of the two arguments
-if (Object.keys(first) && Object.keys(second)) {
-	
-	//logs if true
-	console.log("true");
-	
-//otherwise
-} else {
-	
-	//logs false
-	console.log("false");
+	//compares the keys of the two arguments
+	if (Object.keys(first) && Object.keys(second)) {
+		
+		//logs if true
+		console.log("true");
+		
+	//otherwise
+	} else {
+		
+		//logs false
+		console.log("false");
+	}
+}
+
+ 
+//and builds and returns an array of strings 
+//of the given length. 
+//So if we ran your function with an argument of 3, 
+//we would get an array of 3 random words back 
+//(the words don't have to be actual sensical English words 
+//-- "nnnnfph" totally counts). 
+//The words should be of randomly varying length, 
+//with a minimum of 1 letter and a maximum of 10 letters. 
+//(This involves a new trick, generating a random number, 
+//that you'll have to look up, but the solution on how to 
+//do so is relatively straightforward.)
+
+
+
+
+//Write a function that takes an integer for length,
+function wordBuilder(number){
 	
 }
-}
+
 
 
 console.log(printLongest(wordStorage));
