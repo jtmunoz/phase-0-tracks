@@ -25,4 +25,4 @@ function Car(type, year, isHybrid){
 } 
 
 var newCar = new Car("toyota", 1986, false);
-console.log(newCar);
+console.log(newCar); newCar.drive();
