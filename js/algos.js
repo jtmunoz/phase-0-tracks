@@ -43,8 +43,37 @@ function printLongest(argument){
 
 }
 
-console.log(printLongest(wordStorage));
+var objectUno = {name: "Steven", age: 54};
+var objectDos = {name: "Tamir", age: 54};
 
+
+//write a function that takes two objects and checks to see if the objects share at
+//least one key-value pair. (You'll keep adding to this file, so we suggest
+//grouping functions at the top and testing at the bottom of the file.) If w
+//called your function with
+
+
+//function that takes two objects
+function compareTwo(first, second){
+
+//compares the keys of the two arguments
+if (Object.keys(first) && Object.keys(second)) {
+	
+	//logs if true
+	console.log("true");
+	
+//otherwise
+} else {
+	
+	//logs false
+	console.log("false");
+	
+}
+}
+
+
+console.log(printLongest(wordStorage));
 //one line version
 //console.log(wordStorage.sort(function (a, b) { return b.length - a.length })[0]);
 
+(compareTwo(objectUno, objectDos));
